@@ -1,0 +1,98 @@
+/* Contenedor de la lista */
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Espacio entre cada nota */
+  padding: 5px 0;
+}
+
+/* Tarjeta de cada nota individual */
+.note-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Efecto al pasar el mouse */
+.note-item:hover {
+  border-color: #4a90e2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Estilo cuando la nota está seleccionada (Activa) */
+.note-item.active {
+  border-color: #4a90e2;
+  background-color: #ebf4ff;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.2);
+}
+
+/* Cabecera interna de la nota (Título + Botón) */
+.note-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.note-item-title {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Corta el título con "..." si es muy largo */
+}
+
+/* Botón de eliminar oculto por defecto, aparece al hacer hover */
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.note-item:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Vista previa del contenido */
+.note-item-preview {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Muestra máximo 2 líneas de texto */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Fecha al pie de la tarjeta */
+.note-item-date {
+  font-size: 0.75rem;
+  color: #999;
+  align-self: flex-end;
+}
+
+/* Mensaje cuando no hay notas */
+.no-notes {
+  text-align: center;
+  color: #888;
+  margin-top: 40px;
+  font-style: italic;
+}

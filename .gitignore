@@ -1,0 +1,4 @@
+# api keys / secrets
+.env
+.env.local
+node_modules/

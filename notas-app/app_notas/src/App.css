@@ -1,0 +1,57 @@
+/* Reseteo básico para que no haya márgenes extraños */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  overflow: hidden; /* Evita el scroll doble en toda la página */
+}
+
+/* El contenedor principal que definimos en App.jsx */
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Estilo para la pantalla de bienvenida cuando no hay nota seleccionada */
+.no-active-note {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+  color: #94a3b8;
+}
+
+.no-active-note p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: white;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* --- TRANSICIONES GLOBALES --- */
+button, input, textarea {
+  font-family: inherit;
+}
+
+/* Animación suave para la aparición de elementos */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.editor, .note-item {
+  animation: fadeIn 0.3s ease-out;
+}
