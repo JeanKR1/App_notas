@@ -32,3 +32,14 @@
 APP NOTAS/
 ├── Frontend/ (React)        
 └── Backend/ (Node.js + Express)
+
+---
+
+### ¿Cómo usar este archivo?
+1. En VS Code, ve a la carpeta principal `APP NOTAS`.
+2. Crea un archivo nuevo y ponle de nombre `README.md`.
+3. Pega el código de arriba y guarda.
+4. Luego, en tu terminal, haz los comandos de Git para subirlo:
+   - `git add README.md`
+   - `git commit -m "Agregado README con la documentación del proyecto"`
+   - `git push`
