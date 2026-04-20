@@ -1,0 +1,39 @@
+.sidebar {
+  width: 300px;
+  min-width: 300px; /* Fundamental para que mantenga su tamaño con zoom */
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.02);
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.btn-new-note {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-new-note:hover {
+  background-color: #357abd;
+}

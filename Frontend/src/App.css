@@ -1,0 +1,55 @@
+/* Reseteo universal para eliminar márgenes en blanco */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden; /* Evita que la página entera haga scroll */
+}
+
+/* Contenedor que divide la pantalla en 2 (Sidebar y Editor) */
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* --- PANTALLA DE BIENVENIDA CENTRADA --- */
+.no-active-note {
+  flex: 1; /* Toma todo el espacio sobrante a la derecha */
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centra horizontalmente (incluso con zoom) */
+  justify-content: center;  /* Centra verticalmente (incluso con zoom) */
+  background-color: #f8fafc;
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-message {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  max-width: 600px;
+}
+
+.welcome-message h1 {
+  color: #000000; /* Letras negras solicitadas */
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.welcome-message p {
+  color: #333333; /* Gris muy oscuro para el subtítulo */
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
